@@ -1,0 +1,10 @@
+{
+    "C_Cpp.errorSquiggles": "disabled",
+    "files.associations": {
+        "*.embeddedhtml": "html",
+        "math.h": "c",
+        "stdio.h": "c",
+        "typeinfo": "c",
+        "stdbool.h": "c"
+    }
+}
