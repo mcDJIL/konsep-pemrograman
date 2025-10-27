@@ -27,7 +27,7 @@ int masukan(int jumlahData)
     {
         printf("Masukkan bilangan ke-%d: ", i);
         scanf("%d", &data);
-        fflush(stdin);
+        getchar();
 
         totalData += data;
     }

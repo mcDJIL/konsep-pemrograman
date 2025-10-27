@@ -4,6 +4,8 @@ int permutasi(int n, int r);
 
 int kombinasi(int n, int r);
 
+int faktorial(int n);
+
 int main(int argc, char const *argv[])
 {
     int n, r, hasilPermutasi, hasilKombinasi;
@@ -29,15 +31,9 @@ int permutasi(int n, int r)
 
     newR = n - r;
 
-    for (int i = n; i > 0; i--)
-    {
-        faktorialN *= i;
-    }
+    faktorialN = faktorial(n);
     
-    for (int i = newR; i > 0; i--)
-    {
-        faktorialR *= i;
-    }
+    faktorialR = faktorial(newR);
 
     result = faktorialN / faktorialR;
 
@@ -50,22 +46,24 @@ int kombinasi(int n, int r)
 
     newR = n - r;
 
-    for (int i = n; i > 0; i--)
-    {
-        faktorialN *= i;
-    }
+    faktorialN = faktorial(n);
     
-    for (int i = newR; i > 0; i--)
-    {
-        faktorialR *= i;
-    }
+    faktorialR = faktorial(newR);
 
-    for (int i = r; i > 0; i--)
-    {
-        faktorialR2 *= i;
-    }
+    faktorialR2 = faktorial(r);
 
     result = faktorialN / (faktorialR * faktorialR2);
 
+    return result;
+}
+
+int faktorial(int n) {
+    int result = 1;
+
+    for (int i = n; i > 0; i--)
+    {
+        result *= i;
+    }
+    
     return result;
 }
